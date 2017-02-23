@@ -1,1 +1,1 @@
-# Realtime comment box using Lumen + Vue.js
+# Realtime comment (Docker + Lumen + Vue.js)
