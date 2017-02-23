@@ -1,0 +1,11 @@
+.no-sort {
+    cursor: n-resize;
+}
+
+a {
+    text-decoration: none !important
+}
+
+.ui-sortable-helper {
+    display: table;
+}

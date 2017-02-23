@@ -1,0 +1,145 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	color: #555;
+// 	@include font-size($font-size);
+}
+a, a:link, a:visited, a:focus, a:hover, a:active{
+	color: $link-color;
+	outline: 0;
+	&.extend-link{
+		cursor: default;
+	}
+}
+a:hover{
+	color: $link-color - #111111;
+}
+
+.text-left	{ text-align: left  }
+.text-right	{ text-align: right }
+.text-center{ text-align: center}
+.text-just	{ text-align: justify}
+
+.pull-left	{ float: left }
+.pull-right	{ float: right}
+
+.inner{
+	display: block;
+	margin: 0 auto;
+	padding: 0px 30px;
+}
+
+.title-page{
+	display: block;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	color: #000;
+}
+
+#main{
+	display: block;
+// 	padding-top: 20px;
+	padding-left: $navbar-size;
+	.sublink{
+		display: block;
+		padding: 10px 0px;
+		a{
+			display: inline-block;
+			margin: 10px 10px;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}	
+}
+.table{
+	width: 100% !important;
+}
+.row-graph{
+	display: block;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	strong{
+		color: #000;
+	}
+}
+.chart, .pie {
+    font-size: 14px;
+    height: 250px;
+    overflow: hidden;
+    width: 100%;
+}
+.table-ch3{
+	border: 2px solid #ccc;
+	tbody, thead{
+		tr{
+			th{
+				color: #000;
+			}
+			td{
+				vertical-align: middle;
+			}
+			th, td{
+				&:nth-child(1){}
+				&:nth-child(2){width: 150px; border-left: 2px solid #ccc;}
+				&:nth-child(3){width: 120px; border-left: 2px solid #ccc;}
+				&:nth-child(4){width: 130px; border-left: 2px solid #ccc;}
+				&:nth-child(5){width:  90px; border-left: 2px solid #ccc;}
+			}
+		}
+	}
+}
+.table-cover{
+	tbody, thead{
+		tr{
+			td{
+				vertical-align: middle;	
+			}
+			th, td{
+				&:nth-child(1){ width: 300px; }
+				&:nth-child(2){}
+			}
+			img{
+				max-width: 300px;
+			}
+		}
+	}
+}
+.table-video{
+	tbody, thead{
+		tr{
+			th{
+				color: #000;
+			}
+			td{
+				vertical-align: middle;
+			}
+			th, td{
+				&:nth-child(1){}
+				&:nth-child(2){width: 100px; text-align: right;}
+				&:nth-child(3){ text-align: center;}
+			}
+		}
+	}
+}
+.tab-panel{
+	display: block;
+	padding: 20px;
+	border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	margin-bottom: 40px;
+	@include radius(0px 0px 5px 5px);
+}
+.subhead{
+	display: block;
+	font-size: 0.8em;
+	color: #999;
+}
+
+.font-green-haze {
+  color: #44b6ae !important; 
+}
+

@@ -1,0 +1,39 @@
+#navbar{
+	display: block;
+	position: fixed;
+	z-index: 5;
+	left: 0px;
+	top: 0px;
+	width: $navbar-size;
+	height: 100%;
+	overflow-y: scroll;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: #f0f0f0;
+	ul{
+		margin: 0px;
+		padding: 0px;
+		li{
+			margin: 0px;
+			margin: 0px;
+			list-style: none;
+			a{
+				text-decoration: none;
+				color: #555;
+				display: block;
+				padding: 10px 10px 10px 20px;
+			}
+			&.extend{
+// 				background: rgba(0,0,0,0.05);
+			}
+			ul{
+				display: block;
+				li{
+					a{
+						padding: 9px 10px 9px 40px;
+					}
+				}
+			}
+		}
+	}
+}

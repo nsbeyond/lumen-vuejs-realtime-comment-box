@@ -1,0 +1,76 @@
+.form{
+	display: block;
+	margin-bottom: 20px;
+}
+input{
+	&[type=text], &[type=email], &[type=number], &[type=passsword]{
+		padding: 6px 12px;
+		border: 1px solid #bbb;
+		@include radius(3px);
+		@include transition(500ms);
+		&.round{
+			@include radius(30px);
+		}
+		&:focus{
+			border: 1px solid #666;
+		}
+	}
+}
+.search{
+	display: inline-block;
+	background: url('img/search.png') 5px center no-repeat transparent;
+	padding: 6px 10px 6px 30px !important;
+}
+
+textarea{
+	padding: 6px 12px;
+	@include radius(3px);
+	@include transition(500ms);
+	&:focus{
+		border: 1px solid #666;
+	}
+}
+
+.form-row, .form-group{
+	display: block;
+	margin-bottom: 15px;
+	@include clearfix();
+}
+.form-control.auto{
+	width: auto ;
+}
+.form-control.inline{
+	display: inline-block;
+}
+select{
+	background: url('img/arrow-down.jpg') right center no-repeat transparent;
+	padding: 6px 12px;
+	border: 1px solid #bbb;
+    padding: 6px 30px 6px 12px;
+   -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    @include radius(3px);
+//     font-size: 1em;
+}
+.btn{
+	display: inline-block;
+	margin-bottom: 0; // For input.btn
+	font-weight: $btn-font-weight;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none; 
+	border: 1px solid transparent;
+	white-space: nowrap;
+	background-color: #efefef;
+	text-decoration: none;
+	font-size: .9em;
+	padding: 6px 12px;
+	@include radius(3px);
+	@include transition(500ms);
+	&:hover{
+		background: #888;
+		color: #fff;
+	}
+}

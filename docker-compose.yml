@@ -1,0 +1,56 @@
+version: '2'
+services:
+    nginx-proxy:
+        image: jwilder/nginx-proxy:0.4.0
+        ports:
+            - '80:80'
+            - '443:443'
+        volumes:
+            - ./builds/nginx/conf.d/:/etc/nginx/conf.d/
+            - /var/run/docker.sock:/tmp/docker.sock:ro
+    #
+    # Backoffice
+    #
+    backoffice:
+        build:
+            context: ./builds/nginx/backoffice/
+        links:
+            - backoffice-php
+            - db
+        volumes_from:
+            - volumes_backoffice
+        volumes:
+            - ./logs/backoffice/:/var/log/nginx
+            - /etc/localtime:/etc/localtime:ro
+        environment:
+            - VIRTUAL_HOST=vuejs.local
+
+    backoffice-php:
+        build:
+             context: ./builds/php-fpm
+        volumes_from:
+            - volumes_backoffice
+    #
+    # Database
+    #
+    db:
+        image: mysql:5.7
+        volumes:
+            - mysql-data:/var/lib/mysql
+        env_file: .local.env
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links:
+            - db
+        ports:
+            - '1234:80'
+    #
+    # Data
+    #
+    volumes_backoffice:
+        image: tianon/true
+        volumes:
+            - ./backoffice/:/var/www/backoffice
+volumes:
+  mysql-data:
+    driver: local

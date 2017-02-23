@@ -1,1 +1,1 @@
-# lumen-vuejs-realtime-comment-box
+# Realtime comment box using Lumen + Vue.js
