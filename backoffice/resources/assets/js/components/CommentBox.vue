@@ -55,7 +55,7 @@
                 this.submitDisabled = (value.length >= 1 && this.text.length >= 1) ? false : true
             },
             'text': function(value) {
-                this.submitDisabled = (value.length >= 1 && this.text.length >= 1) ? false : true
+                this.submitDisabled = (value.length >= 1 && this.author.length >= 1) ? false : true
             }
         },
         methods: {
@@ -68,8 +68,8 @@
                         if (result == 'error') {
                             this.showComment = false
                         } else {
-                            this.showComment = true
                             this.comments = result
+                            this.showComment = true
                             this.deleteDisabled = false
                             this.sendText = 'Send'
                             this.deleteText = 'Delete'
