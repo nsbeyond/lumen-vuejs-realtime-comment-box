@@ -461,6 +461,7 @@
     <script src="{{ url('assets/global/plugins/ladda/spin.min.js') }}"></script>
     <script src="{{ url('assets/global/plugins/ladda/ladda.min.js') }}"></script>
     <script src="{{ url('assets/pages/scripts/ui-buttons.min.js') }}"></script>
+    <script src="https://unpkg.com/tween.js@16.3.4"></script>
     @yield('script')
 </body>
 
